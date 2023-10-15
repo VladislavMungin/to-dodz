@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                 renderPosts.forEach((item,i)=>{
                     if(target.parentNode == item){
                         axios.delete(`https://jsonplaceholder.typicode.com/posts/${i}`).then(res=>{
+                            console.log(res);
                             posts.splice(i,1);
                         }).catch(err=>{
                             alert(`Ошибка ${err}`)
